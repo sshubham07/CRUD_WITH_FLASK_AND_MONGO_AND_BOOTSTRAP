@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <a  class ="btn btn-primary" href="{{url_for('users')}}" style="float: right; margin : 4px 2px;">ADD NEW USER</a>
+    <form action="{{url_for('update_user')}}" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="{{_name}}"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="{{_email}}" readonly><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" value={{_pwd}} name="pwd"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
